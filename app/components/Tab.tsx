@@ -3,6 +3,7 @@ import {useState} from 'react'
 import Image from "next/image"
 import ArrowDown from "@/public/chevron-down.svg"
 import PlusIcon from "@/public/plus.svg"
+import History from './History'
 const Tab = () => {
     const [activeTab, setActiveTab] = useState('history')
     
@@ -15,7 +16,7 @@ const Tab = () => {
         {
             id: 'history',
             label: 'History',
-            component: 'History',
+            component: <History />,
         }
     ]
   return (
