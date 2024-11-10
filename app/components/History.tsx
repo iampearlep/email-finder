@@ -106,13 +106,13 @@ const History = () => {
   const renderTableHeader = () => (
     <tr>
       <th scope="col" className="text-gray-600 px-3 py-3">Source</th>
-      <th scope="col" className="text-gray-600 px-3 py-3 hidden md:table-cell">Result</th>
-      <th scope="col" className="text-gray-600 px-3 py-3 hidden md:table-cell">Name</th>
-      <th scope="col" className="text-gray-600 px-3 py-3 hidden md:table-cell">User</th>
-      <th scope="col" className="text-gray-600 px-3 py-3 hidden md:table-cell">Credits</th>
-      <th scope="col" className="text-gray-600 px-3 py-3 hidden md:table-cell">Type</th>
+      <th scope="col" className="text-gray-600 px-3 py-3">Result</th>
+      <th scope="col" className="text-gray-600 px-3 py-3">Name</th>
+      <th scope="col" className="text-gray-600 px-3 py-3">User</th>
+      <th scope="col" className="text-gray-600 px-3 py-3">Credits</th>
+      <th scope="col" className="text-gray-600 px-3 py-3">Type</th>
       <th scope="col" className="text-gray-600 px-3 py-3">Date</th>
-      <th scope="col" className="text-gray-600 px-3 py-3">Action</th>
+      <th scope="col" className="text-gray-600 px-3 py-3"></th>
     </tr>
   );
 
@@ -129,8 +129,7 @@ const History = () => {
 
   return (
     <div className="w-full">
-      {/* Desktop View */}
-      <div className="hidden md:block relative overflow-x-auto rounded-lg border border-gray-200">
+      <div className="relative overflow-x-auto rounded-lg border border-gray-200">
         <table className="w-full text-sm text-left">
           <thead className="text-left capitalize font-semibold bg-gray-100">
             {renderTableHeader()}
@@ -145,27 +144,25 @@ const History = () => {
                 <td className="px-3 py-4">{item.credits}</td>
                 <td className="px-3 py-4">{item.type}</td>
                 <td className="px-3 py-4">{item.date}</td>
-                <td className="py-2 flex justify-center items-center">
-                  <button className={`py-2 w-11/12 text-xs rounded-lg border ${getStatusStyles(item.status)}`}>
+                <td className="py-2 px-2 flex justify-center items-center">
+                  <button className={`py-2 px-2 md:px-1 w-full text-xs rounded-lg border ${getStatusStyles(item.status)}`}>
                     {item.buttonText}
                   </button>
                 </td>
               </tr>
             ))}
-            <tr>
-      <div className="flex justify-center gap-2 mt-4 py-3">
+     <tr>
+     <td>
+      <div className="flex justify-center gap-2 pt-6 py-2">
         <button className="px-4 py-2 text-sm border rounded-lg hover:bg-gray-50">Prev</button>
         <button className="px-4 py-2 text-sm border rounded-lg bg-gray-50">1</button>
         <button className="px-4 py-2 text-sm border rounded-lg hover:bg-gray-50">Next</button>
       </div>
-            </tr>
+            </td>
+     </tr>
           </tbody>
         </table>
       </div>
-
-    
-
-    
     </div>
   );
 };
