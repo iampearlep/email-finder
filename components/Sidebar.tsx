@@ -1,5 +1,6 @@
 "use client";
 import { useState } from "react";
+import Link from "next/link";
 import Image from "next/image";
 import Logo from "@/public/LOGO (2).svg";
 import TabIcon from "@/public/tabIcon.svg";
@@ -34,7 +35,7 @@ const Sidebar = () => {
                 : "flex-row justify-between"
             }`}
           >
-            <div className="flex flex-row items-center gap-x-2">
+            <Link href="/" className="flex flex-row items-center gap-x-2">
               {isCollapsed && (
                 <div
                   onClick={() => setIsCollapsed(!isCollapsed)}
@@ -72,7 +73,7 @@ const Sidebar = () => {
                   />
                 </div>
               )}
-            </div>
+            </Link>
             {!isCollapsed && (
               <div className="" onClick={() => setIsCollapsed(!isCollapsed)}>
                 <Image
@@ -87,7 +88,10 @@ const Sidebar = () => {
           </div>
 
           <div className="grid grid-cols-1 items-center place-self-start w-full gap-y-1 px-3">
-            <div className="group relative flex flex-row items-center gap-x-2 py-3 px-5 hover:bg-gray-100 rounded-lg transition-all ease-linear">
+            <Link
+              className="group relative flex flex-row items-center gap-x-2 py-3 px-5 hover:bg-gray-100 rounded-lg transition-all ease-linear"
+              href="/overview"
+            >
               <Image
                 src={HomeIcon}
                 height={20}
@@ -105,9 +109,12 @@ const Sidebar = () => {
                   Overview
                 </span>
               )}
-            </div>
+            </Link>
 
-            <div className="group relative flex flex-row items-center gap-x-2 py-3 px-5 hover:bg-gray-100 rounded-lg transition-all ease-linear">
+            <Link
+              href="/mailboxes"
+              className="group relative flex flex-row items-center gap-x-2 py-3 px-5 hover:bg-gray-100 rounded-lg transition-all ease-linear"
+            >
               <Image
                 src={MailIcon}
                 height={20}
@@ -125,9 +132,12 @@ const Sidebar = () => {
                   Mailboxes
                 </span>
               )}
-            </div>
+            </Link>
 
-            <div className="group relative flex flex-row items-center gap-x-2 py-3 px-5 hover:bg-gray-100 rounded-lg transition-all ease-linear">
+            <Link
+              href="/contact"
+              className="group relative flex flex-row items-center gap-x-2 py-3 px-5 hover:bg-gray-100 rounded-lg transition-all ease-linear"
+            >
               <Image
                 src={ContactIcon}
                 height={20}
@@ -143,9 +153,12 @@ const Sidebar = () => {
                   Contact
                 </span>
               )}
-            </div>
+            </Link>
 
-            <div className="group relative flex flex-row items-center gap-x-2 py-3 px-5 hover:bg-gray-100 rounded-lg transition-all ease-linear">
+            <Link
+              href="/inbox"
+              className="group relative flex flex-row items-center gap-x-2 py-3 px-5 hover:bg-gray-100 rounded-lg transition-all ease-linear"
+            >
               <Image
                 src={InboxIcon}
                 height={18}
@@ -163,7 +176,7 @@ const Sidebar = () => {
                   Unified inbox
                 </span>
               )}
-            </div>
+            </Link>
           </div>
 
           <div className="grid grid-cols-1 items-center place-self-start w-full gap-y-1 px-3">

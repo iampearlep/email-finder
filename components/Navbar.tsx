@@ -1,18 +1,17 @@
 "use client";
 import React from "react";
+import Link from "next/link";
 import Image from "next/image";
 import Profile from "@/public/Profile.svg";
 import BellIcon from "@/public/bell-01.svg";
 import Input from "./Input";
 import { MenuIcon, XIcon } from "lucide-react";
 import Logo from "@/public/LOGO (2).svg";
-import TabIcon from "@/public/tabIcon.svg";
 import HomeIcon from "@/public/home-02.svg";
 import MailIcon from "@/public/mail-03.svg";
 import ContactIcon from "@/public/user-square.svg";
 import InboxIcon from "@/public/Icon (1).svg";
 import MailIcon2 from "@/public/message-plus-square.svg";
-import ArrowDown from "@/public/chevron-down.svg";
 import Icon1 from "@/public/message-check-square.svg";
 import Icon2 from "@/public/message-notification-square.svg";
 import Icon3 from "@/public/message-question-square.svg";
@@ -23,7 +22,6 @@ import Icon6 from "@/public/Icon.svg";
 const Navbar = () => {
   const [open, setOpen] = React.useState(false);
   const [isClicked, setIsClicked] = React.useState(false);
-  const [isOpen, setIsOpen] = React.useState(false);
   const [isToggle, setIsToggle] = React.useState(false);
   const handleToggle = () => {
     setIsToggle(!isToggle);
@@ -34,13 +32,15 @@ const Navbar = () => {
       <div className="flex flex-row items-center justify-between py-5 px-5 md:px-6">
         <div className="flex md:hidden">
           <div className="px-1.5 py-1.5 rounded-lg border border-gray-300">
-            <Image
-              src={Logo}
-              height={24}
-              width={24}
-              alt=""
-              className="w-full h-full"
-            />
+            <Link href="/">
+              <Image
+                src={Logo}
+                height={24}
+                width={24}
+                alt=""
+                className="w-full h-full"
+              />
+            </Link>
           </div>
         </div>
         {/* Desktop screens */}
@@ -102,33 +102,39 @@ const Navbar = () => {
               </button>
               <div className="mt-20 max-h-screen overflow-y-auto w-full">
                 <div className="px-2 py-6 flex flex-col justify-center gap-y-5 items-center text-center">
-                  <Image
-                    src={HomeIcon}
-                    height={20}
-                    width={20}
-                    alt=""
-                    className=""
-                  />
-                  <Image
-                    src={MailIcon}
-                    height={20}
-                    width={20}
-                    alt=""
-                    className=""
-                  />
-                  <Image
-                    src={MailIcon2}
-                    height={20}
-                    width={20}
-                    alt=""
-                    className=""
-                  />
+                  <Link href="/">
+                    <Image
+                      src={HomeIcon}
+                      height={20}
+                      width={20}
+                      alt=""
+                      className=""
+                    />
+                  </Link>
+                  <Link href="/mailboxes">
+                    <Image
+                      src={MailIcon}
+                      height={20}
+                      width={20}
+                      alt=""
+                      className=""
+                    />
+                  </Link>
+                  <Link href="/contact">
+                    <Image
+                      src={ContactIcon}
+                      height={20}
+                      width={20}
+                      alt=""
+                      className=""
+                    />
+                  </Link>
                 </div>
                 <div className="px-2 py-2 flex flex-col justify-center gap-y-5 items-center text-center">
                   <div className="flex flex-col gap-y-5 items-center justify-center">
                     <div className="">
                       <Image
-                        src={ContactIcon}
+                        src={MailIcon2}
                         height={20}
                         width={20}
                         alt=""
