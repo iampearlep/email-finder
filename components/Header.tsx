@@ -18,9 +18,6 @@ const Header = () => {
             Sample file
             </button>
       </div>
-      <div >
-       <Tab />
-      </div>
     </div>
   )
 }
