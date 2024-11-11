@@ -113,7 +113,7 @@ const History = () => {
     </PaginationItem>
     <PaginationItem>
       <PaginationNext  onClick={handleNext}
-              className={currentPage >= totalPages ? ' opacity-100 cursor-pointer bg-red-200 border border-red-500 text-red-500 hover:border-0' : 'pointer-events-none'} />
+              className={currentPage >= totalPages ? 'pointer-events-none opacity-100' : 'cursor-pointer bg-red-200 border border-red-500 text-red-500 hover:border-0'} />
     </PaginationItem>
   </PaginationContent>
 </Pagination>

@@ -1,5 +1,4 @@
 import Image from "next/image"
-import Tab from "./Tab"
 import FileIcon from "@/public/file-download-02.svg"
 
 const Header = () => {
