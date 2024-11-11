@@ -8,14 +8,13 @@ import MailIcon from "@/public/mail-03.svg";
 import ContactIcon from "@/public/user-square.svg";
 import InboxIcon from "@/public/Icon (1).svg";
 import MailIcon2 from "@/public/message-plus-square.svg";
-import ArrowDown from "@/public/chevron-down.svg"
-import Icon1 from "@/public/message-check-square.svg"
-import Icon2 from "@/public/message-notification-square.svg"
-import Icon3 from "@/public/message-question-square.svg"
-import Icon4 from "@/public/phone-plus.svg"
-import Icon5 from "@/public/settings-02.svg"
-import Icon6 from "@/public/Icon.svg"
-
+import ArrowDown from "@/public/chevron-down.svg";
+import Icon1 from "@/public/message-check-square.svg";
+import Icon2 from "@/public/message-notification-square.svg";
+import Icon3 from "@/public/message-question-square.svg";
+import Icon4 from "@/public/phone-plus.svg";
+import Icon5 from "@/public/settings-02.svg";
+import Icon6 from "@/public/Icon.svg";
 
 const Sidebar = () => {
   const [isCollapsed, setIsCollapsed] = useState(false);
@@ -175,13 +174,7 @@ const Sidebar = () => {
             )}
 
             <div className="group relative flex flex-row items-center gap-x-2 py-3 px-5 hover:bg-gray-100 rounded-lg transition-all ease-linear">
-              <Image
-                src={Icon2}
-                height={18}
-                width={18}
-                alt=""
-                className=" "
-              />
+              <Image src={Icon2} height={18} width={18} alt="" className=" " />
               {!isCollapsed && (
                 <p className="text-gray-600 text-base font-semibold">
                   Email warmer
@@ -215,13 +208,7 @@ const Sidebar = () => {
             </div>
 
             <div className="group relative flex flex-row items-center gap-x-2 py-3 px-5 hover:bg-gray-100 rounded-lg transition-all ease-linear">
-              <Image
-                src={Icon1}
-                height={20}
-                width={20}
-                alt=""
-                className=" "
-              />
+              <Image src={Icon1} height={20} width={20} alt="" className=" " />
               {!isCollapsed && (
                 <p className="text-gray-600 text-base font-semibold">
                   Email validator
@@ -235,13 +222,7 @@ const Sidebar = () => {
             </div>
 
             <div className="group relative flex flex-row items-center gap-x-2 py-3 px-5 hover:bg-gray-100 rounded-lg transition-all ease-linear">
-              <Image
-                src={Icon4}
-                height={18}
-                width={18}
-                alt=""
-                className=" "
-              />
+              <Image src={Icon4} height={18} width={18} alt="" className=" " />
               {!isCollapsed && (
                 <p className="text-gray-600 text-base font-semibold">
                   Phone finder
@@ -254,13 +235,7 @@ const Sidebar = () => {
               )}
             </div>
             <div className="group relative flex flex-row items-center gap-x-2 py-3 px-5 hover:bg-gray-100 rounded-lg transition-all ease-linear">
-              <Image
-                src={Icon6}
-                height={18}
-                width={18}
-                alt=""
-                className=" "
-              />
+              <Image src={Icon6} height={18} width={18} alt="" className=" " />
               {!isCollapsed && (
                 <p className="text-gray-600 text-base font-semibold">
                   Sequencer
@@ -282,13 +257,7 @@ const Sidebar = () => {
             )}
 
             <div className="group relative flex flex-row items-center gap-x-2 py-3 px-5 hover:bg-gray-100 rounded-lg transition-all ease-linear">
-              <Image
-                src={Icon5}
-                height={20}
-                width={20}
-                alt=""
-                className=" "
-              />
+              <Image src={Icon5} height={20} width={20} alt="" className=" " />
               {!isCollapsed && (
                 <p className="text-gray-600 text-base font-semibold">
                   Settings
@@ -302,13 +271,7 @@ const Sidebar = () => {
             </div>
 
             <div className="group relative flex flex-row items-center gap-x-2 py-3 px-5 hover:bg-gray-100 rounded-lg transition-all ease-linear">
-              <Image
-                src={Icon3}
-                height={20}
-                width={20}
-                alt=""
-                className=" "
-              />
+              <Image src={Icon3} height={20} width={20} alt="" className=" " />
               {!isCollapsed && (
                 <p className="text-gray-600 text-base font-semibold">
                   Help center
